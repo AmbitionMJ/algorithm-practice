@@ -1,1 +1,1 @@
-# algorithm-practice
+c언어 및 java 알고리즘 문제풀이를 기록하는 공간입니다.
