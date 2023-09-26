@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void main() {
+    int a[4] = {0, 2, 4, 8};
+    int b[3];
+    int *pl; //정수형 포인터 변수 
+    int i, j;
+    int sum = 0;
+
+    for (i = 1; i < 4; i++) {
+        pl = a + i; // 포인터 p1배열은 a의 i번째 요소를 가리킨다.
+        b[i - 1] = *pl - a[i - 1]; //p*는 p1이 가리키는 값
+        sum = sum + a[i] + b[i - 1]; // sum 변수에 a[i]와 b[i-1]의 합을 더합니다.
+    }
+
+    printf("%d", sum); //22가 출력됩니다.
+}
