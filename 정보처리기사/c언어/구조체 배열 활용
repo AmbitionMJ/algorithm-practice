@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+struct student {
+    int n, g; //구조체 정의 
+};
+
+int main() {
+    struct student st[2]; //구조체 타입의 배열 st를 선언, 크기는 2입니다.
+    int i = 0;
+
+    for (i; i < 2; i++) { //두 번 반복 진행
+        st[i].n = i; //반복 인덱스 값을 n에 할당 
+        st[i].g = i + 1; //반복 인덱스에 1을 더한 값을 g에 할당
+    }
+
+    printf("%d", st[0].n + st[1].g); //2가 출력됩니다.
+    return 0;
+}
+
+
