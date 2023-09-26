@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int len(char * p);
+
+
+int main(){
+    
+    char * p1 = "2023";
+    char * p2 ="202307";
+    
+    printf("%d", len(p1) + len(p2)); 함수를 사용하여 두 문자열의 길이를 계산하고 합을 출력합니다.
+    
+    
+}
+
+int len(char *p){ 
+    int r =0;
+    
+    while(*p !='\0'){ //널을 만나면 종료
+        
+        p++;
+        r++; //  1씩 증가시켜서 문자열의 길이를 측정 
+        
+        
+    }
+return r;    // 문자열의 길이를 반환합니다.
+}
