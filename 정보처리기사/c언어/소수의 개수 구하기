@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// 소수 판별 함수 Soojebi
+int Soojebi(int num){
+    int i;
+    for(i = 2; i < num; i++){
+        if(num % i == 0)
+            return 0; // 소수가 아닌 경우 0을 반환
+    }
+    
+    return 1; // 소수인 경우 1을 반환
+}
+
+int main()
+{
+    int num = 10; // 주어진 숫자
+    int cnt = 0; // 소수의 개수를 저장할 변수
+    int i;
+    
+    for(i = 2; i < num; i++)
+        cnt += Soojebi(i); // Soojebi 함수를 호출하여 소수이면 cnt를 1 증가
+    
+    printf("%d\n", cnt); // 소수의 개수를 출력 // 2,3,5,7 이므로 답은 4 
+    
+    return 0; // 프로그램 종료
+}
+
+//사용자 정의함수는 return 을 만나면 즉시 종료됩니다.
+
+// Soojebi 함수에서 루프를 돌릴 때 if문이 거짓이면 아무것도 리턴하지 않고 다시 루프를 돌리고 최종적으로 false이면 1을 return 한다.
+// 처음 main에서 Soojebi를 호출하여 num에 2가 전달되면 for문에서 i<num이 성립하지 않기 때문에 곧바로 1을 리턴해준다.
