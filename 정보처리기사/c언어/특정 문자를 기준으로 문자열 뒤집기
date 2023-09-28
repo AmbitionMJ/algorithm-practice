@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    char ch, str[] = "12345000";
+    int i, j;
+
+    for (i = 0; i < 8; i++) {
+        ch = str[i];
+        if (ch == '0') // '0'을 찾으면 루프 중단
+            break;
+    }
+
+    for (j = 0; j < i; j++) { //i는 break 걸린 시점에서 넘어오기 때문에 5다 
+        i--; // 54321 
+        ch = str[j];
+        str[j] = str[i];
+        str[i] = ch;
+    }
+
+    printf("%s", str); // 54321000 출력
+
+    return 0;
+}
