@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int fn(char* a) {
+    int i = 0;
+
+    // 문자열을 끝까지 순회하면서 길이를 세는 루프
+    for (i = 0; a[i] != '\0'; i++);
+
+    return i;  // 문자열의 길이를 반환
+}
+
+void main() {
+    char a[10] = "Hello";
+
+    // fn 함수를 호출하여 문자열 "Hello"의 길이를 출력
+    printf("%d", fn(a)); 
+}
